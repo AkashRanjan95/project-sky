@@ -1,51 +1,51 @@
 <!-- <p>login works!</p> -->
-
 <div class="stars-bg">
     <div id="stars"></div>
     <div id="stars2"></div>
     <div id="stars3"></div>
 </div>
 <div class="body-container">
-
-    <div class="login-box" #loginBox>
-        <div class="login-content">
-            <h2 class="login-header">Sign in</h2>
-            <form action="">
-                <div class="inputBox">
-                    <input type="text" name="username" placeholder="Username">
-                </div>
-                <div class="inputBox">
-                    <input type="password" name="password" placeholder="Password">
-                </div>
-                <!-- <div class="inputBox">
-                    <input type="submit" value="Login">
-                </div> -->
-                <button class="btn-login">
-                    Sign in
-                </button>
-                <p class="forget">Forgot password ? <a href="#">Click here</a></p>
-                <p class="forget">Don't have an account ? <a href="#" (click)="rotateCard()">Sign up</a></p>
-            </form>
-        </div>
-
-        <div class="signup-content">
-            <div class="">
-                <h2 class="signup-header">Sign up</h2>
+    <div class="form-container">
+        <div class="login-box" #loginBox>
+            <div class="login-content">
+                <h2 class="login-header">Sign in</h2>
                 <form action="">
                     <div class="inputBox">
-                        <input type="text" name="username" placeholder="Username">
+                        <input type="text" name="username" placeholder="Username" #user_name>
                     </div>
                     <div class="inputBox">
-                        <input type="email" name="email" placeholder="E-mail">
+                        <input type="password" name="password" placeholder="Password" #pass_word>
                     </div>
-                    <div class="inputBox">
-                        <input type="number" name="phone" placeholder="Contact no.">
-                    </div>
-                    <button class="btn-signup">
-                        Continue
+                    <!-- <div class="inputBox">
+                        <input type="submit" value="Login">
+                    </div> -->
+                    <button class="btn-login" (click)="login(user_name.value, pass_word.value)">
+                        Sign in
                     </button>
-                    <p class="return-to-signin">Already have an account ?<a href="#" (click)="rotateCard()">Click here</a></p>
+                    <p class="forget">Forgot password ? <a href="#">Click here</a></p>
+                    <p class="forget">Don't have an account ? <a href="#" (click)="rotateCard()">Sign up</a></p>
                 </form>
+            </div>
+
+            <div class="signup-content">
+                <div class="">
+                    <h2 class="signup-header">Sign up</h2>
+                    <form action="">
+                        <div class="inputBox">
+                            <input type="text" name="username" placeholder="Username">
+                        </div>
+                        <div class="inputBox">
+                            <input type="email" name="email" placeholder="E-mail">
+                        </div>
+                        <div class="inputBox">
+                            <input type="number" name="phone" placeholder="Contact no.">
+                        </div>
+                        <button class="btn-signup">
+                            Continue
+                        </button>
+                        <p class="return-to-signin">Already have an account ?<a href="#" (click)="rotateCard()">Click here</a></p>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

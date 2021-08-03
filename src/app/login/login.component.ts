@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,13 +12,17 @@ export class LoginComponent implements OnInit {
   @ViewChild('loginBox', { static: false })
   loginBox!: ElementRef;
 
-  constructor() { }
+  constructor(private _router:Router) { }
 
   ngOnInit() {
   }
 
-  login(){
-    alert("Login button has been clicked!!")
+  login(username:string, password:string){
+    if(username !== null && password !==null && username === 'akash' && password==='sky'){
+      this._router.navigate(['home']);
+    } else {
+      alert("Invalid credentials!!");
+    }
   }
 
   rotateCard(){
